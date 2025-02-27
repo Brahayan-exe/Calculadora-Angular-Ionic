@@ -1,17 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
-    </ion-title>
+      Calculadora
+      </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Calculadora</ion-title>
+   
     </ion-toolbar>
   </ion-header>
+  <h1>CALCULADORA</h1>
+    <div id="calculadora">
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+      <div id="pantalla1" >
+        <input id="pantalla" type="text" [value]="operacion" readonly>
+        <div id="borrard">
+          <input id="borrar" type="button" value="C" (click)="borrar()">
+        </div>
+      </div>
+
+      <div id="teclado">
+        <input  type="button" value="9" (click)="agregar('9')">
+        <input type="button" value="8" (click)="agregar('8')">
+        <input type="button" value="7" (click)="agregar('7')">
+        <input id="multiplicacion" type="button" value="*" (click)="agregar('*')">
+        <input type="button" value="6" (click)="agregar('6')">
+        <input type="button" value="5" (click)="agregar('5')">
+        <input type="button" value="4" (click)="agregar('4')">
+        <input id="division" type="button" value="/" (click)="agregar('/')">
+        <input type="button" value="3" (click)="agregar('3')">
+        <input type="button" value="2" (click)="agregar('2')">
+        <input type="button" value="1" (click)="agregar('1')">
+        <input id="suma" type="button" value="+" (click)="agregar('+')">
+        <input type="button" value="0" (click)="agregar('0')">
+        <input type="button" value="." (click)="agregar('.')">
+        <input id="potencia" type="button" value="x'" (click)="elevarCuadrado()">
+        <input id="igual" type="button" value="=" (click)="calcular()">
+      </div>
+
+    </div>
+
+
+  <app-explore-container >
+      </app-explore-container>
 </ion-content>
